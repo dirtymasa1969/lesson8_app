@@ -1,0 +1,10 @@
+<h1>Comment#new</h1>
+<p>Find me in app/views/comment/new.html.erb</p>
+
+<%= form_with model: @comment do |f| %>
+  <p>
+    <%= f.label :body,"コメント" %>
+    <%= f.text_field :body %>
+  </p>
+  <%= f.submit %>
+<% end %>

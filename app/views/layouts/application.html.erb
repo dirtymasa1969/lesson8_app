@@ -11,7 +11,8 @@
   </head>
 
   <body>
-   <% if user_signed_in? %>
+    <% if user_signed_in? %>
+    <div class="header_menu">
       <%= link_to "新規投稿", new_tweet_path %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       <%= link_to "マイページ", user_path(current_user.id) %>
@@ -21,6 +22,7 @@
     <% end %>
       <%= link_to "ツイート一覧", tweets_path %>
       <%= link_to "ユーザー一覧", users_path %>
+    </div>
     <%= yield %>
   </body>
 </html>
